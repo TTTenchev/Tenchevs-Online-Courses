@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+
+<body>
+    <div class="container">
+        <h2 class="course_name">{{course.name}}</h2>
+        <h3 class="course_description">{{course.description}}</h3>
+        {%if course.shown == False%}
+        <button onclick="window.location.href='/payment?price={{course.price}}&course_id={{course.id}}'">Attend Course</a>
+            {%else%}
+            <div class="course_content">
+                <p>{{course.content}}</p>
+            </div>
+            {%endif%}
+    </div>
+</body>
+
+</html>

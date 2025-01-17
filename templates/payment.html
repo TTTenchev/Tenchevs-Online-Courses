@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+<body style="display:flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div id="paypal-button-container"></div>
+    <p id="result-message"></p>
+    <div id="course-info" data-price="{{price}}" course_id="{{course_id}}"></div>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=Aa5aUMWaMlLgV--VKm1c6YpyLGmlCrSoHNQRjtZeeqz9h7drKOYve6YYAvhYFL4j2_NZbpXklEUhNQdg&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"
+        data-sdk-integration-source="developer-studio">
+        </script>
+</body>
+<script src="{{ url_for('static', filename='payment.js') }}"></script>
+
+</html>

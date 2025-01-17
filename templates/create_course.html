@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+
+<body>
+    <div class="container">
+        <h1>Hi, creating course is here!</h1>
+        <form action="{{ url_for('create_course') }}" method="POST">
+            <label for="course_name">Course name:</label>
+            <input type="text" id="course_name" name="course_name" required>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <label for="content">Content:</label>
+            <input type="text" id="content" name="content" required>
+            <button type="submit">Create Course</button>
+        </form>
+    </div>
+</body>
+
+</html>

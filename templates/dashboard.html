@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+
+<body class="{{ background_class }} dashboard-page">
+
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+        <ul class="message">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% if isStudent == False %}
+        <button class="create-course" onclick="window.location.href='/create_course'">Create Course</button>
+        {% endif %}
+        <ul class="courses">
+            {% for course in courses %}
+            <li>
+                <h2>{{ course.name }}</h2>
+                <a href="/course?course_id={{ course.id }}">Go to course</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
