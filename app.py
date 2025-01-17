@@ -128,8 +128,8 @@ class UserModelView(ModelView):
 
 paypal_client: PaypalServersdkClient = PaypalServersdkClient(
     client_credentials_auth_credentials=ClientCredentialsAuthCredentials(
-        o_auth_client_id="Aa5aUMWaMlLgV--VKm1c6YpyLGmlCrSoHNQRjtZeeqz9h7drKOYve6YYAvhYFL4j2_NZbpXklEUhNQdg",
-        o_auth_client_secret="EFAnthcwpaMQMJcD7JUKszCSzMtk5iTLbslpsP7m_39fnPpSq_HUxSGibmS_RHKDP8yK2_SDX94Q0LAF",
+        o_auth_client_id="HIDDEN",
+        o_auth_client_secret="HIDDEN",
     ),
     logging_configuration=LoggingConfiguration(
         log_level=logging.INFO,
